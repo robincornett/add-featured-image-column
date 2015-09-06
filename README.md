@@ -33,6 +33,11 @@ Using git, browse to your `/wp-content/plugins/` directory and clone this reposi
 
 Then go to your Plugins screen and click __Activate__.
 
+## Screenshots
+
+![Screenshot of posts in the admin](https://github.com/robincornett/add-featured-image-column/blob/master/assets/screenshot-1.png)  
+_Screenshot of posts with featured images._
+
 ## Frequently Asked Questions
 
 No questions. Just activate and enjoy.
