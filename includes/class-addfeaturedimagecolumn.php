@@ -93,6 +93,7 @@ class AddFeaturedImageColumn {
 	protected function admin_column_image( $args ) {
 		$image_id = $args['image_id'];
 		$preview  = wp_get_attachment_image_src( $image_id, 'thumbnail' );
+		$preview  = apply_filters( 'addfeaturedimagecolumn_thumbnail', $preview, $image_id );
 		if ( ! $preview ) {
 			return;
 		}
