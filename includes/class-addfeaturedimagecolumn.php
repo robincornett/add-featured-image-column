@@ -29,6 +29,7 @@ class AddFeaturedImageColumn {
 		$post_types = get_post_types( $args, $output );
 		$post_types['post'] = 'post';
 		$post_types['page'] = 'page';
+		$post_types = apply_filters( 'addfeaturedimagecolumn_post_types', $post_types );
 		foreach ( $post_types as $post_type ) {
 			if ( ! post_type_supports( $post_type, 'thumbnail' ) ) {
 				continue;
