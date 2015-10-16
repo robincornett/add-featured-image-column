@@ -50,6 +50,9 @@ No questions. Just activate and enjoy.
 
 ## Changelog
 
+### 1.0.1
+* Added filter to exclude post types
+
 ### 1.0.0
 * Initial release on WordPress.org
 

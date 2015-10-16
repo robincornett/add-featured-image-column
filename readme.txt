@@ -32,9 +32,12 @@ No questions. Just activate and enjoy.
 
 == Upgrade Notice ==
 
-First try!
+Filter added so that specific post types can be excluded
 
 == Changelog ==
+
+= 1.0.1 =
+* Added filter to exclude post types
 
 = 1.0.0 =
 * Initial release on WordPress.org
