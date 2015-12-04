@@ -7,7 +7,7 @@ This is a little plugin which adds a featured image column to WordPress. It auto
 Banner/icon image credit: [Lauren Mancke on Minimography](http://minimography.com/).
 
 ## Requirements
-* WordPress 4.1, tested up to 4.3
+* WordPress 4.1, tested up to 4.4
 
 ## Installation
 
