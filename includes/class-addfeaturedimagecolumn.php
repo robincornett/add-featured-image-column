@@ -19,7 +19,8 @@ class AddFeaturedImageColumn {
 
 	public function add_post_type_column() {
 		if ( class_exists( 'Display_Featured_Image_Genesis' ) ) {
-			return;
+			deactivate_plugins( ADDFEATUREDIMAGECOLUMN_BASENAME );
+			add_action( 'admin_notices', array( $this, 'error_message' ) );
 		}
 		$args       = array(
 			'public'   => true,
@@ -36,6 +37,18 @@ class AddFeaturedImageColumn {
 			}
 			add_filter( "manage_edit-{$post_type}_columns", array( $this, 'add_featured_image_column' ) );
 			add_action( "manage_{$post_type}_posts_custom_column", array( $this, 'manage_image_column' ), 10, 2 );
+
+	/**
+	 * Error message if we're already using Display Featured Image for Genesis.
+	 *
+	 * @since 1.1.0
+	 */
+	public function error_message() {
+		$error = sprintf( __( 'You are using Display Featured Image for Genesis and do not need to use Add Featured Image Column, so it has been deactivated.', 'add-featured-image-column' ) );
+		echo '<div class="error"><p>' . esc_attr( $error ) . '</p></div>';
+
+		if ( isset( $_GET['activate'] ) ) {
+			unset( $_GET['activate'] );
 		}
 	}
 

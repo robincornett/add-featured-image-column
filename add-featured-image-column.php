@@ -24,6 +24,10 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+if ( ! defined( 'ADDFEATUREDIMAGECOLUMN_BASENAME' ) ) {
+	define( 'ADDFEATUREDIMAGECOLUMN_BASENAME', plugin_basename( __FILE__ ) );
+}
+
 // Include classes
 function addfeaturedimagecolumn_require() {
 	$files = array(
