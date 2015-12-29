@@ -37,6 +37,10 @@ class AddFeaturedImageColumn {
 			}
 			add_filter( "manage_edit-{$post_type}_columns", array( $this, 'add_featured_image_column' ) );
 			add_action( "manage_{$post_type}_posts_custom_column", array( $this, 'manage_image_column' ), 10, 2 );
+			add_filter( "manage_edit-{$post_type}_sortable_columns", array( $this, 'make_sortable' ) );
+			add_action( 'pre_get_posts', array( $this, 'orderby' ) );
+		}
+	}
 
 	/**
 	 * Error message if we're already using Display Featured Image for Genesis.
@@ -67,6 +71,46 @@ class AddFeaturedImageColumn {
 
 		return array_merge( $new_columns, $columns );
 
+	}
+
+	/**
+	 * Make the featured image column sortable.
+	 * @param $columns
+	 * @return mixed
+	 * @since 1.1.0
+	 */
+	public function make_sortable( $columns ) {
+		$columns['featured_image'] = 'featured_image';
+		return $columns;
+	}
+
+	/**
+	 * Set a custom query to handle sorting by featured image
+	 * @param $query
+	 * @since 1.1.0
+	 */
+	public function orderby( $query ) {
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		$orderby = $query->get( 'orderby' );
+		if ( 'featured_image' === $orderby ) {
+			$query->set(
+				'meta_query', array(
+					'relation' => 'OR',
+					array(
+						'key'     => '_thumbnail_id',
+						'compare' => 'NOT EXISTS',
+					),
+					array(
+						'key'     => '_thumbnail_id',
+						'compare' => 'EXISTS',
+					),
+				)
+			);
+			$query->set( 'orderby', 'meta_value_num date' );
+		}
 	}
 
 	/**
@@ -123,7 +167,7 @@ class AddFeaturedImageColumn {
 		if ( ! post_type_supports( $screen->post_type, 'thumbnail' ) ) {
 			return;
 		}
-		if ( in_array( $screen->base, array( 'edit' ) ) ) { ?>
+		if ( in_array( $screen->base, array( 'edit' ), true ) ) { ?>
 			<style type="text/css">
 				.column-featured_image { width: 105px; }
 				.column-featured_image img { margin: 0 auto; display: block; height: auto; width: auto; max-width: 60px; max-height: 80px; }
