@@ -5,7 +5,7 @@ Donate link: https://robincornett.com/donate/
 Tags: featured image, admin columns
 Requires at least: 4.1
 Tested up to: 4.4
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -32,9 +32,13 @@ No questions. Just activate and enjoy.
 
 == Upgrade Notice ==
 
-Filter added so that specific post types can be excluded
+The featured image column is now sortable.
 
 == Changelog ==
+
+= 1.1.0 =
+* Added: the featured image column is now sortable.
+* Due to redundancy, this plugin now deactivates if Display Featured Image for Genesis is active.
 
 = 1.0.1 =
 * Added filter to exclude post types

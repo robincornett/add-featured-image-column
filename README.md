@@ -50,6 +50,10 @@ No questions. Just activate and enjoy.
 
 ## Changelog
 
+### 1.1.0
+* Added: the featured image column is now sortable.
+* Due to redundancy, this plugin now deactivates if Display Featured Image for Genesis is active.
+
 ### 1.0.1
 * Added filter to exclude post types
 

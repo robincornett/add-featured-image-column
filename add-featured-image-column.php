@@ -12,9 +12,10 @@
  * Plugin Name:       Add Featured Image Column
  * Plugin URI:        http://github.com/robincornett/add-featured-image-column/
  * Description:       This plugin adds a featured image column to the WordPress admin.
- * Version:           1.0.1
+ * Version:           1.1.0
  * Author:            Robin Cornett
  * Author URI:        http://robincornett.com
+ * Text Domain:       add-featured-image-column
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
