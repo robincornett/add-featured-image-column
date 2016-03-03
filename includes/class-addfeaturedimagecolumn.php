@@ -172,7 +172,7 @@ class AddFeaturedImageColumn {
 		if ( in_array( $screen->base, array( 'edit' ), true ) ) { ?>
 			<style type="text/css">
 				.column-featured_image { width: 105px; }
-				.column-featured_image img { margin: 0 auto; display: block; height: auto; width: auto; max-width: 60px; max-height: 80px; }
+				.column-featured_image img { margin: 0 auto; height: auto; width: auto; max-width: 60px; max-height: 80px; }
 				@media screen and (max-width: 782px) { .column-featured_image img { margin: 0; } }
 			</style> <?php
 		}
