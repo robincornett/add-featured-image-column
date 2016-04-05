@@ -4,8 +4,8 @@ Contributors: littler.chicken
 Donate link: https://robincornett.com/donate/
 Tags: featured image, admin columns
 Requires at least: 4.1
-Tested up to: 4.4
-Stable tag: 1.1.0
+Tested up to: 4.5
+Stable tag: 1.1.1
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -32,9 +32,12 @@ No questions. Just activate and enjoy.
 
 == Upgrade Notice ==
 
-The featured image column is now sortable.
+The featured image column no longer breaks on mobile.
 
 == Changelog ==
+
+= 1.1.1 =
+* Fixed: featured image column on mobile
 
 = 1.1.0 =
 * Added: the featured image column is now sortable.
