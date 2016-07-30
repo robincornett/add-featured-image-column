@@ -7,7 +7,7 @@ This is a little plugin which adds a featured image column to WordPress. It auto
 Banner/icon image credit: [Lauren Mancke on Minimography](http://minimography.com/).
 
 ## Requirements
-* WordPress 4.1, tested up to 4.5
+* WordPress 4.1, tested up to 4.6
 
 ## Installation
 
@@ -49,6 +49,10 @@ No questions. Just activate and enjoy.
 * Built by [Robin Cornett](http://robincornett.com/)
 
 ## Changelog
+
+### 1.1.2
+* Added: text_domain, language files
+* Fixed (really): featured image column on mobile
 
 ### 1.1.1
 * Fixed: featured image column on mobile
