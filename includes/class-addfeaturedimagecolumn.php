@@ -13,8 +13,18 @@
 class AddFeaturedImageColumn {
 
 	public function run() {
+		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 		add_action( 'admin_init', array( $this, 'add_post_type_column' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'featured_image_column_width' ) );
+	}
+
+	/**
+	 * Set up text domain for translations
+	 *
+	 * @since 1.1.0
+	 */
+	public function load_textdomain() {
+		load_plugin_textdomain( 'add-featured-image-column', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	public function add_post_type_column() {
