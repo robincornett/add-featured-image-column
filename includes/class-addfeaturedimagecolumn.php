@@ -68,7 +68,7 @@ class AddFeaturedImageColumn {
 
 	/**
 	 * add featured image column
-	 * @param column $columns set up new column to show featured image for taxonomies/posts/etc.
+	 * @param array $columns set up new column to show featured image for taxonomies/posts/etc.
 	 *
 	 * @since 0.9.0
 	 */
@@ -96,7 +96,7 @@ class AddFeaturedImageColumn {
 
 	/**
 	 * Set a custom query to handle sorting by featured image
-	 * @param $query
+	 * @param $query WP_Query
 	 * @since 1.1.0
 	 */
 	public function orderby( $query ) {
@@ -127,9 +127,9 @@ class AddFeaturedImageColumn {
 
 	/**
 	 * manage new post_type column
-	 * @param  column id $column  column id is featured_image
-	 * @param  post id $post_id id of each post
-	 * @return featured image          display featured image, if it exists, for each post
+	 * @param  column string $column  column id is featured_image
+	 * @param  post int $post_id id of each post
+	 * @return string featured image          display featured image, if it exists, for each post
 	 *
 	 * @since 0.9.0
 	 */
@@ -155,9 +155,9 @@ class AddFeaturedImageColumn {
 
 	/**
 	 * Generic function to return featured image
-	 * @param  array $args array of values to pass to function ( image_id, context, alt_tag )
-	 * @return string       image html
+	 * @param $args array of values to pass to function ( image_id, context, alt_tag )
 	 *
+	 * @return string|void
 	 * @since 0.9.0
 	 */
 	protected function admin_column_image( $args ) {
@@ -165,14 +165,13 @@ class AddFeaturedImageColumn {
 		$preview  = wp_get_attachment_image_src( $image_id, 'thumbnail' );
 		$preview  = apply_filters( 'addfeaturedimagecolumn_thumbnail', $preview, $image_id );
 		if ( ! $preview ) {
-			return;
+			return '';
 		}
 		return sprintf( '<img src="%1$s" alt="%2$s" />', $preview[0], $args['alt'] );
 	}
 
 	/**
-	 * sets a width for the featured image column
-	 * @return stylesheet inline stylesheet to set featured image column width
+	 * Creates an inline stylesheet to set featured image column width
 	 */
 	public function featured_image_column_width() {
 		$screen = get_current_screen();
