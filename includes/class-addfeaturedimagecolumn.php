@@ -173,7 +173,7 @@ class AddFeaturedImageColumn {
 			<style type="text/css">
 				.column-featured_image { width: 105px; }
 				.column-featured_image img { margin: 0 auto; height: auto; width: auto; max-width: 60px; max-height: 80px; }
-				@media screen and (max-width: 782px) { .column-featured_image img { margin: 0; } }
+				@media screen and (max-width: 782px) { .column-featured_image { display: table-cell !important; width: 52px; } .column-featured_image img { margin: 0; max-width: 42px; } }
 			</style> <?php
 		}
 	}
