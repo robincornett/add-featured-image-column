@@ -33,14 +33,14 @@ class AddFeaturedImageColumn {
 			add_action( 'admin_notices', array( $this, 'error_message' ) );
 		}
 		$args       = array(
-			'public'   => true,
 			'_builtin' => false,
+			'show_ui'  => true,
 		);
 		$output     = 'names';
 		$post_types = get_post_types( $args, $output );
 		$post_types['post'] = 'post';
 		$post_types['page'] = 'page';
-		$post_types = apply_filters( 'addfeaturedimagecolumn_post_types', $post_types );
+		$post_types = apply_filters( 'addfeaturedimagecolumn_post_types', $post_types, $args );
 		foreach ( $post_types as $post_type ) {
 			if ( ! post_type_supports( $post_type, 'thumbnail' ) ) {
 				continue;
@@ -70,6 +70,7 @@ class AddFeaturedImageColumn {
 	 * add featured image column
 	 * @param array $columns set up new column to show featured image for taxonomies/posts/etc.
 	 *
+	 * @return array
 	 * @since 0.9.0
 	 */
 	public function add_featured_image_column( $columns ) {
@@ -127,9 +128,8 @@ class AddFeaturedImageColumn {
 
 	/**
 	 * manage new post_type column
-	 * @param  column string $column  column id is featured_image
-	 * @param  post int $post_id id of each post
-	 * @return string featured image          display featured image, if it exists, for each post
+	 * @param  $column string $column  column id is featured_image
+	 * @param  $post_id int id of each post
 	 *
 	 * @since 0.9.0
 	 */
@@ -150,14 +150,13 @@ class AddFeaturedImageColumn {
 		);
 
 		echo wp_kses_post( $this->admin_column_image( $args ) );
-
 	}
 
 	/**
 	 * Generic function to return featured image
 	 * @param $args array of values to pass to function ( image_id, context, alt_tag )
 	 *
-	 * @return string|void
+	 * @return string
 	 * @since 0.9.0
 	 */
 	protected function admin_column_image( $args ) {
