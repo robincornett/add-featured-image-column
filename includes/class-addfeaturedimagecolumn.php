@@ -78,7 +78,7 @@ class AddFeaturedImageColumn {
 		$new_columns = $columns;
 		array_splice( $new_columns, 1 );
 
-		$new_columns['featured_image'] = __( 'Featured Image', 'add-featured-image-column' );
+		$new_columns['featured_image'] = __( 'Image', 'add-featured-image-column' );
 
 		return array_merge( $new_columns, $columns );
 

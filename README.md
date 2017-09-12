@@ -7,7 +7,7 @@ This is a little plugin which adds a featured image column to WordPress. It auto
 Banner/icon image credit: [Lauren Mancke on Minimography](http://minimography.com/).
 
 ## Requirements
-* WordPress 4.1, tested up to 4.6
+* WordPress 4.1, tested up to 4.8
 
 ## Installation
 
@@ -49,6 +49,11 @@ No questions. Just activate and enjoy.
 * Built by [Robin Cornett](http://robincornett.com/)
 
 ## Changelog
+
+### 1.1.3
+* Improved: any post type which supports featured images (including private post types) will display a featured image column
+* Added: the args to get the list of post types has been added to the post types filter
+* Changed: admin column heading is just "Image" instead of "Featured Image"
 
 ### 1.1.2
 * Added: text_domain, language files

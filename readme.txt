@@ -4,8 +4,8 @@ Contributors: littler.chicken
 Donate link: https://robincornett.com/donate/
 Tags: featured image, admin columns
 Requires at least: 4.1
-Tested up to: 4.7
-Stable tag: 1.1.2
+Tested up to: 4.8
+Stable tag: 1.1.3
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -35,6 +35,11 @@ No questions. Just activate and enjoy.
 Really fixed the featured image column for mobile.
 
 == Changelog ==
+
+= 1.1.3 =
+* Improved: any post type which supports featured images (including private post types) will display a featured image column
+* Added: the args to get the list of post types has been added to the post types filter
+* Changed: admin column heading is just "Image" instead of "Featured Image"
 
 = 1.1.2 =
 * Added: text_domain, language files
