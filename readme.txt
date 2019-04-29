@@ -32,7 +32,7 @@ No questions. Just activate and enjoy.
 
 == Upgrade Notice ==
 
-Really fixed the featured image column for mobile.
+Updated output if a post has no featured image
 
 == Changelog ==
 
