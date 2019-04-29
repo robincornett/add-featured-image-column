@@ -4,8 +4,8 @@ Contributors: littler.chicken
 Donate link: https://robincornett.com/donate/
 Tags: featured image, admin columns
 Requires at least: 4.1
-Tested up to: 5.0
-Stable tag: 1.1.4
+Tested up to: 5.2
+Stable tag: 1.1.5
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -35,6 +35,9 @@ No questions. Just activate and enjoy.
 Really fixed the featured image column for mobile.
 
 == Changelog ==
+
+= 1.1.5 =
+* improved: output for posts with no featured image
 
 = 1.1.4 =
 * fixed: featured image column display on mobile
