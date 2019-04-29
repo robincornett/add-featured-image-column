@@ -140,6 +140,8 @@ class AddFeaturedImageColumn {
 		}
 		$image_id = get_post_thumbnail_id( $post_id );
 		if ( ! $image_id ) {
+			echo '<span aria-hidden="true">—</span>';
+			printf( '<span class="screen-reader-text">%s</span>', esc_html__( 'No image', 'add-featured-image-column' ) );
 			return;
 		}
 
