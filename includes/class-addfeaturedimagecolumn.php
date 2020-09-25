@@ -45,6 +45,9 @@ class AddFeaturedImageColumn {
 			if ( ! post_type_supports( $post_type, 'thumbnail' ) ) {
 				continue;
 			}
+			if ( class_exists( 'WooCommerce' ) && 'product' === $post_type ) {
+				continue;
+			}
 			add_filter( "manage_edit-{$post_type}_columns", array( $this, 'add_featured_image_column' ) );
 			add_action( "manage_{$post_type}_posts_custom_column", array( $this, 'manage_image_column' ), 10, 2 );
 			add_filter( "manage_edit-{$post_type}_sortable_columns", array( $this, 'make_sortable' ) );
