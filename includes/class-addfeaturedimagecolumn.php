@@ -40,12 +40,12 @@ class AddFeaturedImageColumn {
 		$post_types = get_post_types( $args, $output );
 		$post_types['post'] = 'post';
 		$post_types['page'] = 'page';
+		if ( class_exists( 'WooCommerce' ) ) {
+			unset( $post_types['product'] );
+		}
 		$post_types = apply_filters( 'addfeaturedimagecolumn_post_types', $post_types, $args );
 		foreach ( $post_types as $post_type ) {
 			if ( ! post_type_supports( $post_type, 'thumbnail' ) ) {
-				continue;
-			}
-			if ( class_exists( 'WooCommerce' ) && 'product' === $post_type ) {
 				continue;
 			}
 			add_filter( "manage_edit-{$post_type}_columns", array( $this, 'add_featured_image_column' ) );
