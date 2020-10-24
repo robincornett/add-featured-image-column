@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Add Featured Image Column\n"
-"POT-Creation-Date: 2019-04-29 12:08-0400\n"
+"POT-Creation-Date: 2020-10-24 10:55-0400\n"
 "PO-Revision-Date: 2016-07-30 15:05-0400\n"
 "Last-Translator: Robin Cornett <hello@robincornett.com>\n"
 "Language-Team: Robin Cornett <hello@robincornett.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: add-featured-image-column.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -21,17 +21,17 @@ msgstr ""
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/class-addfeaturedimagecolumn.php:61
+#: includes/class-addfeaturedimagecolumn.php:64
 msgid ""
 "You are using Display Featured Image for Genesis and do not need to use Add "
 "Featured Image Column, so it has been deactivated."
 msgstr ""
 
-#: includes/class-addfeaturedimagecolumn.php:81
+#: includes/class-addfeaturedimagecolumn.php:84
 msgid "Image"
 msgstr ""
 
-#: includes/class-addfeaturedimagecolumn.php:144
+#: includes/class-addfeaturedimagecolumn.php:148
 msgid "No image"
 msgstr ""
 
@@ -40,7 +40,7 @@ msgid "Add Featured Image Column"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://github.com/robincornett/add-featured-image-column/"
+msgid "https://github.com/robincornett/add-featured-image-column/"
 msgstr ""
 
 #. Description of the plugin/theme
