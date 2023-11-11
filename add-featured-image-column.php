@@ -6,13 +6,16 @@
  * @author    Robin Cornett <hello@robincornett.com>
  * @license   GPL-2.0+
  * @link      https://robincornett.com
- * @copyright 2015-2020 Robin Cornett Creative, LLC
+ * @copyright 2015-2024 Robin Cornett Creative, LLC
  *
  * @wordpress-plugin
  * Plugin Name:       Add Featured Image Column
  * Plugin URI:        https://github.com/robincornett/add-featured-image-column/
  * Description:       This plugin adds a featured image column to the WordPress admin.
  * Version:           1.1.6
+ * Requires at least: 4.1
+ * Requires PHP:      7.4
+ * Tested up to:      6.4
  * Author:            Robin Cornett
  * Author URI:        https://robincornett.com
  * Text Domain:       add-featured-image-column
